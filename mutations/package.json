@@ -1,0 +1,22 @@
+{
+  "name": "mutations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generic-diff-spec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^2.5.3",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.6.0",
+    "karma-jasmine": "^1.1.0",
+    "stryker": "^0.5.9",
+    "stryker-api": "^0.4.2",
+    "stryker-html-reporter": "^0.3.0",
+    "stryker-jasmine": "^0.1.0",
+    "stryker-karma-runner": "^0.3.5"
+  }
+}
