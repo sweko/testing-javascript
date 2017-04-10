@@ -1,6 +1,3 @@
-"use strict";
-exports.__esModule = true;
-var generic_diff_1 = require("./generic-diff");
 describe("Generic difference calculator", function () {
     it('verifies that generic diff of two undefineds returns that nothing is changed', function () {
         // 1. Arrange
@@ -9,10 +6,10 @@ describe("Generic difference calculator", function () {
         var expected = {
             oldValue: undefined,
             newValue: undefined,
-            changeType: generic_diff_1.DiffType.Unchanged
+            changeType: DiffType.Unchanged
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -23,10 +20,10 @@ describe("Generic difference calculator", function () {
         var expected = {
             oldValue: undefined,
             newValue: "some-value",
-            changeType: generic_diff_1.DiffType.Added
+            changeType: DiffType.Added
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -37,10 +34,10 @@ describe("Generic difference calculator", function () {
         var expected = {
             oldValue: "some-value",
             newValue: undefined,
-            changeType: generic_diff_1.DiffType.Removed
+            changeType: DiffType.Removed
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -51,10 +48,10 @@ describe("Generic difference calculator", function () {
         var expected = {
             oldValue: null,
             newValue: null,
-            changeType: generic_diff_1.DiffType.Unchanged
+            changeType: DiffType.Unchanged
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -65,10 +62,10 @@ describe("Generic difference calculator", function () {
         var expected = {
             oldValue: null,
             newValue: "some-value",
-            changeType: generic_diff_1.DiffType.Added
+            changeType: DiffType.Added
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -79,10 +76,10 @@ describe("Generic difference calculator", function () {
         var expected = {
             oldValue: "some-value",
             newValue: null,
-            changeType: generic_diff_1.DiffType.Removed
+            changeType: DiffType.Removed
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -93,10 +90,10 @@ describe("Generic difference calculator", function () {
         var expected = {
             oldValue: undefined,
             newValue: null,
-            changeType: generic_diff_1.DiffType.Modified
+            changeType: DiffType.Modified
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -107,10 +104,10 @@ describe("Generic difference calculator", function () {
         var expected = {
             oldValue: null,
             newValue: undefined,
-            changeType: generic_diff_1.DiffType.Modified
+            changeType: DiffType.Modified
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -121,10 +118,10 @@ describe("Generic difference calculator", function () {
         var expected = {
             oldValue: "5",
             newValue: 5,
-            changeType: generic_diff_1.DiffType.TypeChanged
+            changeType: DiffType.TypeChanged
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -147,10 +144,10 @@ describe("Generic difference calculator", function () {
                 first: "string",
                 second: 100
             },
-            changeType: generic_diff_1.DiffType.Unchanged
+            changeType: DiffType.Unchanged
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -185,10 +182,10 @@ describe("Generic difference calculator", function () {
                     value: "something"
                 }
             },
-            changeType: generic_diff_1.DiffType.Unchanged
+            changeType: DiffType.Unchanged
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -211,10 +208,10 @@ describe("Generic difference calculator", function () {
                 second: 100,
                 first: "string"
             },
-            changeType: generic_diff_1.DiffType.Unchanged
+            changeType: DiffType.Unchanged
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -253,10 +250,10 @@ describe("Generic difference calculator", function () {
                 second: 100,
                 first: "string"
             },
-            changeType: generic_diff_1.DiffType.Unchanged
+            changeType: DiffType.Unchanged
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -279,15 +276,15 @@ describe("Generic difference calculator", function () {
                 first: "string",
                 second: 200
             },
-            changeType: generic_diff_1.DiffType.Modified,
+            changeType: DiffType.Modified,
             second: {
                 oldValue: 100,
                 newValue: 200,
-                changeType: generic_diff_1.DiffType.Modified
+                changeType: DiffType.Modified
             }
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -326,15 +323,15 @@ describe("Generic difference calculator", function () {
                 second: 101,
                 first: "string"
             },
-            changeType: generic_diff_1.DiffType.Modified,
+            changeType: DiffType.Modified,
             second: {
                 oldValue: 100,
                 newValue: 101,
-                changeType: generic_diff_1.DiffType.Modified
+                changeType: DiffType.Modified
             }
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -373,20 +370,20 @@ describe("Generic difference calculator", function () {
                 second: 100,
                 first: "string"
             },
-            changeType: generic_diff_1.DiffType.Modified,
+            changeType: DiffType.Modified,
             inner: {
                 oldValue: { text: 'something', index: 0 },
                 newValue: { index: 1, text: 'something' },
-                changeType: generic_diff_1.DiffType.Modified,
+                changeType: DiffType.Modified,
                 index: {
                     oldValue: 0,
                     newValue: 1,
-                    changeType: generic_diff_1.DiffType.Modified
+                    changeType: DiffType.Modified
                 }
             }
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -409,25 +406,25 @@ describe("Generic difference calculator", function () {
                 second: 200,
                 third: true
             },
-            changeType: generic_diff_1.DiffType.Modified,
+            changeType: DiffType.Modified,
             first: {
                 oldValue: "string",
                 newValue: undefined,
-                changeType: generic_diff_1.DiffType.Removed
+                changeType: DiffType.Removed
             },
             second: {
                 oldValue: 100,
                 newValue: 200,
-                changeType: generic_diff_1.DiffType.Modified
+                changeType: DiffType.Modified
             },
             third: {
                 oldValue: undefined,
                 newValue: true,
-                changeType: generic_diff_1.DiffType.Added
+                changeType: DiffType.Added
             }
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -438,10 +435,10 @@ describe("Generic difference calculator", function () {
         var expected = {
             oldValue: [1, 4, 9, 16],
             newValue: { property: "value" },
-            changeType: generic_diff_1.DiffType.TypeChanged
+            changeType: DiffType.TypeChanged
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -452,10 +449,10 @@ describe("Generic difference calculator", function () {
         var expected = {
             oldValue: { property: "value" },
             newValue: [1, 4, 9, 16],
-            changeType: generic_diff_1.DiffType.TypeChanged
+            changeType: DiffType.TypeChanged
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -466,10 +463,10 @@ describe("Generic difference calculator", function () {
         var expected = {
             oldValue: [1, 4, 9, 16],
             newValue: [1, 4, 9, 16],
-            changeType: generic_diff_1.DiffType.Unchanged
+            changeType: DiffType.Unchanged
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -484,10 +481,10 @@ describe("Generic difference calculator", function () {
             removedItems: [],
             unchangedItems: [1, 4, 9],
             changedItems: [],
-            changeType: generic_diff_1.DiffType.Added
+            changeType: DiffType.Added
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -502,10 +499,10 @@ describe("Generic difference calculator", function () {
             removedItems: [25],
             unchangedItems: [1, 4, 9, 16],
             changedItems: [],
-            changeType: generic_diff_1.DiffType.Removed
+            changeType: DiffType.Removed
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -528,10 +525,10 @@ describe("Generic difference calculator", function () {
                 { index: 0, value: "first-value" },
                 { index: 1, value: "second-value" },
             ],
-            changeType: generic_diff_1.DiffType.Unchanged
+            changeType: DiffType.Unchanged
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -561,10 +558,10 @@ describe("Generic difference calculator", function () {
                 { value: 'first-value', index: 0 },
                 { value: 'second-value', index: 1 }
             ],
-            changeType: generic_diff_1.DiffType.Unchanged
+            changeType: DiffType.Unchanged
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -579,10 +576,10 @@ describe("Generic difference calculator", function () {
             removedItems: [9],
             unchangedItems: [1, 4, 16],
             changedItems: [],
-            changeType: generic_diff_1.DiffType.Added | generic_diff_1.DiffType.Removed
+            changeType: DiffType.Added | DiffType.Removed
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue);
+        var actual = GenericDiff.getDifference(oldValue, newValue);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -619,17 +616,17 @@ describe("Generic difference calculator", function () {
             changedItems: [{
                     oldValue: { key: 3, payload: "three" },
                     newValue: { key: 3, payload: "four" },
-                    changeType: generic_diff_1.DiffType.Modified,
-                    payload: { oldValue: 'three', newValue: 'four', changeType: generic_diff_1.DiffType.Modified }
+                    changeType: DiffType.Modified,
+                    payload: { oldValue: 'three', newValue: 'four', changeType: DiffType.Modified }
                 }],
             unchangedItems: [
                 { key: 1, payload: "one" },
                 { key: 2, payload: "two" }
             ],
-            changeType: generic_diff_1.DiffType.Modified | generic_diff_1.DiffType.Added
+            changeType: DiffType.Modified | DiffType.Added
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getArrayDifference(oldValue, newValue, "items", keyExtractor);
+        var actual = GenericDiff.getArrayDifference(oldValue, newValue, "items", keyExtractor);
         // 3. Assert
         expect(actual).toEqual(expected);
     });
@@ -660,7 +657,7 @@ describe("Generic difference calculator", function () {
             newValue: {
                 items: [{ key: 0, payload: 'zero' }, { key: 1, payload: 'one' }, { key: 2, payload: 'two' }, { key: 3, payload: 'four' }]
             },
-            changeType: generic_diff_1.DiffType.Modified,
+            changeType: DiffType.Modified,
             items: {
                 oldValue: [
                     { key: 1, payload: "one" },
@@ -678,18 +675,18 @@ describe("Generic difference calculator", function () {
                 changedItems: [{
                         oldValue: { key: 3, payload: "three" },
                         newValue: { key: 3, payload: "four" },
-                        changeType: generic_diff_1.DiffType.Modified,
-                        payload: { oldValue: 'three', newValue: 'four', changeType: generic_diff_1.DiffType.Modified }
+                        changeType: DiffType.Modified,
+                        payload: { oldValue: 'three', newValue: 'four', changeType: DiffType.Modified }
                     }],
                 unchangedItems: [
                     { key: 1, payload: "one" },
                     { key: 2, payload: "two" }
                 ],
-                changeType: generic_diff_1.DiffType.Modified | generic_diff_1.DiffType.Added
+                changeType: DiffType.Modified | DiffType.Added
             }
         };
         // 2. Act
-        var actual = generic_diff_1.GenericDiff.getDifference(oldValue, newValue, "", keyExtractor);
+        var actual = GenericDiff.getDifference(oldValue, newValue, "", keyExtractor);
         // 3. Assert
         expect(actual).toEqual(expected);
     });

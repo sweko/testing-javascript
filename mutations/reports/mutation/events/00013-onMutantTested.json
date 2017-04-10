@@ -1,0 +1,1 @@
+{"sourceFilePath":"C:\\Source\\Demos\\testing-javascript\\mutations\\groupby.js","mutatorName":"RemoveConditionals","status":4,"replacement":"true","location":{"start":{"line":21,"column":4},"end":{"line":21,"column":32}},"range":[610,638],"testsRan":[],"originalLines":"if (!Array.prototype.groupReduce) {","mutatedLines":"if (true) {"}

@@ -9,7 +9,8 @@
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor",
-    "test:simple": "karma start karma.conf.simple.js"
+    "test:simple": "karma start karma.conf.simple.js",
+    "test:dep": "karma start karma.conf.dependant.js"
   },
   "private": true,
   "dependencies": {

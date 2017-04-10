@@ -3,7 +3,7 @@ module.exports = function (config) {
   var _config = {
     frameworks: ["jasmine", "karma-typescript"],
     files: [
-      { pattern: "./utils/*.ts" },
+      { pattern: "./simple/*.ts" },
       'node_modules/babel-polyfill/dist/polyfill.js'
     ],
     preprocessors: {

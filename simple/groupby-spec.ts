@@ -84,8 +84,9 @@ describe("Array Group By", () => {
             key: "even",
             items: [2, 4, 6, 8, 10]
         }];
+        const keySelector = x => (x % 2) ? "odd" : "even";
         // 2. Act
-        const actual = source.groupBy(x => (x % 2) ? "odd" : "even");
+        const actual = source.groupBy(keySelector);
         // 3. Assert
         expect(actual).toEqual(expected);
     });

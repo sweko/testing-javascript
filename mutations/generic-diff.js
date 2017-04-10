@@ -1,5 +1,4 @@
-"use strict";
-exports.__esModule = true;
+var exports = {};
 var DiffType;
 (function (DiffType) {
     DiffType[DiffType["Unchanged"] = 0] = "Unchanged";
@@ -9,28 +8,7 @@ var DiffType;
     DiffType[DiffType["TypeChanged"] = 8] = "TypeChanged";
     DiffType[DiffType["Uncomparable"] = 1048576] = "Uncomparable";
 })(DiffType = exports.DiffType || (exports.DiffType = {}));
-function updateValue(object, diff, fieldName) {
-    if (!object[fieldName]) {
-        // invalid field name - unable to change non-existant field
-        return;
-    }
-    if (!diff[fieldName]) {
-        // field is not changed as it's not in the diff result
-        return;
-    }
-    if (diff[fieldName]) {
-        object[fieldName] = diff[fieldName].newValue;
-    }
-}
-exports.updateValue = updateValue;
-function updateValues(object, diff) {
-    var fieldNames = [];
-    for (var _i = 2; _i < arguments.length; _i++) {
-        fieldNames[_i - 2] = arguments[_i];
-    }
-    fieldNames.forEach(function (fieldName) { return updateValue(object, diff, fieldName); });
-}
-exports.updateValues = updateValues;
+
 var GenericDiff = (function () {
     function GenericDiff() {
     }
