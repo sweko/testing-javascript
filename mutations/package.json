@@ -4,7 +4,7 @@
   "description": "",
   "main": "generic-diff-spec.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mutate": "./node_modules/.bin/stryker run"
   },
   "author": "",
   "license": "ISC",

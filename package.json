@@ -10,7 +10,8 @@
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor",
     "test:simple": "karma start karma.conf.simple.js",
-    "test:dep": "karma start karma.conf.dependant.js"
+    "test:dep": "karma start karma.conf.dependant.js",
+    "test:mutate": "cd mutations && npm run mutate"
   },
   "private": true,
   "dependencies": {

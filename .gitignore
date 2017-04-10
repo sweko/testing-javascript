@@ -39,6 +39,7 @@ testem.log
 .DS_Store
 Thumbs.db
 
-
+#stryker files
 /mutations/.stryker-tmp
 /mutations/node_modules
+/mutations/reports
